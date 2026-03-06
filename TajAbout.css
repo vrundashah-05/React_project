@@ -1,0 +1,154 @@
+/* --- Base Styles --- */
+.taj-about-section {
+  background-color: #ffffff;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.taj-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* --- Navigation & Hovers --- */
+.taj-secondary-nav {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.taj-secondary-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-item, .active-tab {
+  padding: 20px 0;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  color: #777;
+}
+
+.nav-item:hover {
+  color: #b4975a;
+}
+
+.active-tab {
+  color: #b4975a;
+  border-bottom: 2px solid #b4975a;
+}
+
+/* --- Content Layout --- */
+.taj-about-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.taj-text-block { flex: 1; }
+.taj-image-block { flex: 1.4; }
+
+.taj-heading {
+  font-family: 'Times New Roman', serif;
+  font-size: 36px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.line-deco {
+  width: 40px;
+  height: 1px;
+  background: #333;
+  transition: width 0.5s ease;
+}
+
+.taj-text-block:hover .line-deco {
+  width: 70px; /* Line grows on hover */
+  background: #b4975a;
+}
+
+.taj-description {
+  line-height: 1.8;
+  color: #555;
+  font-size: 16px;
+}
+
+/* --- Image Zoom Effect --- */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.lobby-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.15, 0, 0.15, 1);
+}
+
+.image-wrapper:hover .lobby-img {
+  transform: scale(1.08); /* Slow luxury zoom */
+}
+
+/* --- Animation Classes (Scroll Reveal) --- */
+.reveal {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.fade-in { transform: translateY(20px); }
+.slide-left { transform: translateX(-50px); }
+.slide-right { transform: translateX(50px); }
+
+.reveal-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* --- Chat Pulse Animation --- */
+.taj-chat-widget {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.chat-circle {
+  background: #b4975a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(180, 151, 90, 0.4);
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% { box-shadow: 0 0 0 0px rgba(180, 151, 90, 0.7); }
+  100% { box-shadow: 0 0 0 20px rgba(180, 151, 90, 0); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .taj-about-content { flex-direction: column; text-align: center; }
+  .line-deco { display: none; }
+}

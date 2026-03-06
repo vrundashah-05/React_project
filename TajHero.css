@@ -1,0 +1,129 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: white;
+  color: black;
+}
+
+.book-stay {
+  background: #b08d57;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0 60px 80px;
+  color: white;
+}
+
+.content h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.booking-box {
+  background: white;
+  color: black;
+  display: flex;
+  gap: 20px;
+  padding: 18px 22px;
+  align-items: center;
+  width: fit-content;
+}
+
+.book-now {
+  background: #b08d57;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

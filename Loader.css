@@ -1,0 +1,42 @@
+.taj-loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);   /* black transparent */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+
+  animation: loaderFadeOut 0.8s ease forwards;
+  animation-delay: 4.2s; /* total ≈ 5s */
+}
+
+.taj-logo {
+  height: 95px;
+  animation: logoSlowReveal 4.2s ease-in-out forwards;
+}
+
+/* Slow luxury logo animation */
+@keyframes logoSlowReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  40% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Loader fade away */
+@keyframes loaderFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
