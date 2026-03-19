@@ -1,0 +1,73 @@
+.hotel-info {
+  background: #f5f3ef;
+  padding: 80px 80px;
+  font-family: "Georgia", serif;
+  color: #333;
+}
+
+.hotel-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.hotel-title .line {
+  width: 60px;
+  height: 2px;
+  background: #333;
+  margin-right: 20px;
+}
+
+.hotel-title h1 {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-column {
+  width: 30%;
+  border-right: 1px solid #ddd;
+  padding-right: 40px;
+}
+
+.info-column:last-child {
+  border-right: none;
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.info-block h4 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.info-block p {
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: #b08d57;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bottom-links {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+  color: #b08d57;
+  font-weight: bold;
+  cursor: pointer;
+}
